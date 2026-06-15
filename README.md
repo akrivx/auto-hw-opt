@@ -110,4 +110,4 @@ Feedback and discussion are welcome.
 
 The concepts and architecture described in this repository were conceived and developed by the author.
 
-AI-assisted tools were used during design review, discussion, refinement, and documentation.
+AI-assisted tools were used to generate clean diagrams, refine the documentation, and challenge certain design decisions.
