@@ -105,3 +105,9 @@ Perceive -> Analyse & Reason -> Decide -> Actuate -> Validate -> Learn & Update 
 Conceptual architecture / research proposal.
 
 Feedback and discussion are welcome.
+
+## Attribution
+
+The concepts and architecture described in this repository were conceived and developed by the author.
+
+AI-assisted tools were used during design review, discussion, refinement, and documentation.
