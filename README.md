@@ -1,17 +1,21 @@
 # Autonomous Hardware Optimisation System
+
 An architecture for autonomous optimisation of heterogeneous compute workloads.
 
 The system combines:
 - Source and IR analysis
-- Search-based optimisation
+- Hardware telemetry
+- Optimisation search
 - Transformation discovery
 - Deterministic validation
 
-Unlike traditional autotuners, which operate within a fixed optimisation space, this architecture explicitly separates:
-- Search over known actions
-- Discovery of new actions
+Unlike traditional autotuners, which search within a fixed transformation space, this architecture explicitly separates:
+- Search over known optimisation actions
+- Discovery of new optimisation actions
 
 allowing the optimisation space itself to evolve over time.
+
+> This repository describes a system architecture and research direction. It is not currently an implementation.
 
 ---
 
@@ -29,7 +33,7 @@ This project extends that idea by introducing transformation discovery.
 
 Instead of only asking:
 
-> Which known optimisations should be tried next?
+> Which known optimisation should I try next?
 
 the system can also ask:
 
@@ -48,39 +52,56 @@ Examples include:
 
 ## Architecture
 
+![Architecture](diagrams/architecture.png)
+
 ---
 
-## Core Concepts
+## Core Idea
 
-### Perception
+The architecture separates three distinct concerns.
 
-Build a structured undestanding of the workload and target hardware.
+### Knowledge
 
-### Reasoning
+What optimisations are known?
 
-Analyse bottlenecks, select actions, and discover new transformations.
+Maintained by:
+- Action-Space Manager
+- Transformation Knowledge Base
 
-### Actuation
+### Search
 
-Materialise transformations and execute experiments.
+Which known optimisation should be tried next?
 
-### Validation
+Performed by:
+- Search Engine
 
-Varify correctness and measure optimisation quality.
+### Discovery
 
+What new optimisations should exist?
 
+Performed by:
+- Transformation Discovery Engine
 
+This separation allows conventional optimisation techniques and LLM-based reasoning to coexist within the same system.
 
+---
 
+## High-Level Workflow
 
+```text
+Perceive -> Analyse & Reason -> Decide -> Actuate -> Validate -> Learn & Update -> Repeat
+```
 
+---
 
+## Documentation
 
+- [Architecture](docs/architecture.md)
 
+---
 
+## Status
 
+Conceptual architecture / research proposal.
 
-
-
-
-
+Feedback and discussion are welcome.
