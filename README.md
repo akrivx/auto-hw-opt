@@ -1,6 +1,6 @@
 # Autonomous Hardware Optimisation System
 
-An architecture for autonomous optimisation of heterogeneous compute workloads.
+An exploration of autonomous optimisation systems for heterogeneous hardware.
 
 The system combines:
 - Source and IR analysis
