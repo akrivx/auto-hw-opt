@@ -62,7 +62,7 @@ All candidate optimisations must pass deterministic validation before being acce
 
 ## Pluggable Reasoning
 
-The architecture should not require LLM-based searches. Instead, it should rely on reasoning backends, including:
+The architecture should not rely on pure LLM reasoning. Instead, it should rely on _reasoning backends_, including:
 - Bayesian optimisation
 - Evolutionary search
 - Reinforcement learning
